@@ -1,0 +1,18 @@
+services:
+  flask-app:
+    build: ./flask-app
+    expose:
+      - "5000"
+
+  html-app:
+    build: ./html-app
+    expose:
+      - "80"
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - flask-app
+      - html-app
