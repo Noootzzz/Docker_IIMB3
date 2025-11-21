@@ -1,5 +1,6 @@
 
 ```bash
+cd 5-reverse-proxy
 docker-compose down
 docker-compose up -d --build
 ```
